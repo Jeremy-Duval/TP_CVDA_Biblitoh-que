@@ -24,7 +24,7 @@ public class Personne {
      * @param date : int : date de naissance de la personne
      */
     public Personne(String nom, String prenom, int date){
-        this.numeroPers = 0;
+        this.setNumPers();
         this.nomPers = nom;
         this.prenomPers = prenom;
         this.anNaissance = date;
@@ -72,7 +72,15 @@ public class Personne {
     
     /**************************************************************************/
     
-    
+    /**
+     * Change le numero de personne 
+     * @author Jérémy Duval
+     * @version  Java 8
+     */
+    public void setNumPers(){
+        dernierNumero = getDernierNumero()+1;
+        this.numeroPers = this.getDernierNumero();
+    }
     /**
      * Change le nom de personne
      * @param nom : String : nouveau nom de personne 

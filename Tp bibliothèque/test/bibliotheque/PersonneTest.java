@@ -36,10 +36,11 @@ public class PersonneTest {
     /**
      * Test of getNumero method, of class Personne.
      */
-    @Ignore("Ce test sera implémenté plus tard")
     @Test
     public void testGetNumero() {
-        fail("Test à implémenter plus tard");
+        Personne alan = new Personne("Turing", "Alan", 1912);
+        Personne alan2 = new Personne("Turing", "Alan", 1912);
+        assertEquals(alan2.getNumero(), alan.getNumero()+1);//on ne connait pas l'ordre des tests, seul moyen
     }
 
     /**
@@ -72,12 +73,20 @@ public class PersonneTest {
     /**
      * Test of getDernierNum method, of class Personne.
      */
-    @Ignore("Ce test sera implémenté plus tard")
     @Test
     public void testGetDernierNum() {
-        fail("Test à implémenter plus tard");
+        Personne alan = new Personne("Turing", "Alan", 1912);
+        assertEquals(alan.getDernierNumero(), alan.getNumero());
     }
-
+    /**
+     * Test of setNumero method, of class Personne.
+     */
+    @Test
+    public void testSetNumero() {
+        Personne alan = new Personne("Turing", "Alan", 1912);
+        Personne alan2 = new Personne("Turing", "Alan", 1912);
+        assertEquals(alan.getNumero()+1, alan2.getNumero());//on ne connait pas l'ordre des tests, seul moyen
+    }
 
     /**
      * Test of setNomPers method, of class Personne.
