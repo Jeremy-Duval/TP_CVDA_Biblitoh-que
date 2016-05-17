@@ -24,7 +24,7 @@ public class Personne {
      * @param date : int : date de naissance de la personne
      */
     public Personne(String nom, String prenom, int date){
-        //this.numeroPers
+        this.numeroPers = 0;
         this.nomPers = nom;
         this.prenomPers = prenom;
         this.anNaissance = date;
@@ -36,7 +36,7 @@ public class Personne {
      * @version  Java 8
      */
     public int getNumero(){
-        return 0;
+        return this.numeroPers;
     }
     /**
      * Renvoie le nom de la personne
@@ -79,7 +79,7 @@ public class Personne {
      * @version  Java 8
      */
     public void setNumPers(int num){
-        
+        this.numeroPers = num;
     }
     /**
      * Change le nom de personne
@@ -88,7 +88,7 @@ public class Personne {
      * @version  Java 8
      */
     public void setNomPers(String nom) {
-        
+        this.nomPers = nom;
     }
     /**
      * Change le prenom de personne
@@ -97,7 +97,7 @@ public class Personne {
      * @version  Java 8
      */
     public void setPrenomPers(String prenom) {
-        
+        this.prenomPers = prenom;
     }
     /**
      * Change l'année de naissance
@@ -106,7 +106,7 @@ public class Personne {
      * @version  Java 8
      */
     public void setAnNaissance(int annee) {
-        
+        this.anNaissance = annee;
     }
     
 }
