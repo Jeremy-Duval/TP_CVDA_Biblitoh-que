@@ -72,15 +72,7 @@ public class Personne {
     
     /**************************************************************************/
     
-    /**
-     * Change le numero de personne
-     * @param num : int : nouveau numéro de personne 
-     * @author Jérémy Duval
-     * @version  Java 8
-     */
-    public void setNumPers(int num){
-        this.numeroPers = num;
-    }
+    
     /**
      * Change le nom de personne
      * @param nom : String : nouveau nom de personne 
