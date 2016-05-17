@@ -109,4 +109,16 @@ public class Personne {
         this.anNaissance = annee;
     }
     
+    /**************************************************************************/
+    
+    /**
+     * Redéfinition de toString()
+     * @return String : les informations de la personne
+     * @author Jérémy Duval
+     * @version  Java 8
+     */
+    @Override
+    public String toString(){
+        return this.nomPers + ", " + this.prenomPers + ", " + this.anNaissance;
+    }
 }
