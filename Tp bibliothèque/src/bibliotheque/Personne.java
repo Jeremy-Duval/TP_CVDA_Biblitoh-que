@@ -14,7 +14,7 @@ public class Personne {
     private int numeroPers;
     private String nomPers;
     private String prenomPers;
-    private int anNaissance;
+    private int anNaissancePersonne;
     private static int dernierNumero = 0;
     
     /**
@@ -27,7 +27,7 @@ public class Personne {
         this.setNumPers();
         this.nomPers = nom;
         this.prenomPers = prenom;
-        this.anNaissance = date;
+        this.anNaissancePersonne = date;
     }
     /**
      * Renvoie le numero de personne
@@ -58,7 +58,7 @@ public class Personne {
     }
     
     public int getAnNaissance() {
-        return this.anNaissance;
+        return this.anNaissancePersonne;
     }
     /**
      * Renvoie le dernier numero de personne
@@ -106,7 +106,7 @@ public class Personne {
      * @version  Java 8
      */
     public void setAnNaissance(int annee) {
-        this.anNaissance = annee;
+        this.anNaissancePersonne = annee;
     }
     
     /**************************************************************************/
@@ -119,6 +119,6 @@ public class Personne {
      */
     @Override
     public String toString(){
-        return this.nomPers + ", " + this.prenomPers + ", " + this.anNaissance;
+        return this.nomPers + ", " + this.prenomPers + ", " + this.anNaissancePersonne;
     }
 }

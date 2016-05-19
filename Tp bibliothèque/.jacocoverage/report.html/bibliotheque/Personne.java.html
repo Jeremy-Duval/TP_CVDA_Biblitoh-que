@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Personne.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Tp_biblioth_que&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">bibliotheque</a> &gt; <span class="el_source">Personne.java</span></div><h1>Personne.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bibliotheque;
+
+/**
+ * Classe Personne
+ * @author Jérémy Duval
+ * @version  Java 8
+ */
+public class Personne {
+    private int numeroPers;
+    private String nomPers;
+    private String prenomPers;
+    private int anNaissancePersonne;
+<span class="fc" id="L18">    private static int dernierNumero = 0;</span>
+    
+    /**
+     * Création d'une personne. 
+     * @param nom : String : nom de la personne
+     * @param prenom : String : prenom de la personne
+     * @param date : int : date de naissance de la personne
+     */
+<span class="fc" id="L26">    public Personne(String nom, String prenom, int date){</span>
+<span class="fc" id="L27">        this.setNumPers();</span>
+<span class="fc" id="L28">        this.nomPers = nom;</span>
+<span class="fc" id="L29">        this.prenomPers = prenom;</span>
+<span class="fc" id="L30">        this.anNaissancePersonne = date;</span>
+<span class="fc" id="L31">    }</span>
+    /**
+     * Renvoie le numero de personne
+     * @return numeroPers : int : numero de la personne
+     * @author Jérémy Duval
+     * @version  Java 8
+     */
+    public int getNumero(){
+<span class="fc" id="L39">        return this.numeroPers;</span>
+    }
+    /**
+     * Renvoie le nom de la personne
+     * @return nomPers : String : nom de la personne
+     * @author Jérémy Duval
+     * @version  Java 8
+     */
+    public String getNom(){
+<span class="fc" id="L48">        return this.nomPers;</span>
+    }
+    /**
+     * Renvoie le prénom de la personne
+     * @return prenomPers : String : prénom de la personne
+     * @author Jérémy Duval
+     * @version  Java 8
+     */
+    public String getPrenom(){
+<span class="fc" id="L57">        return this.prenomPers;</span>
+    }
+    
+    public int getAnNaissance() {
+<span class="fc" id="L61">        return this.anNaissancePersonne;</span>
+    }
+    /**
+     * Renvoie le dernier numero de personne
+     * @return dernierNumero : int : renvoi le dernier numero de personne
+     * @author Jérémy Duval
+     * @version  Java 8
+     */
+    public int getDernierNumero(){
+<span class="fc" id="L70">        return dernierNumero; </span>
+    }
+    
+    /**************************************************************************/
+    
+    /**
+     * Change le numero de personne 
+     * @author Jérémy Duval
+     * @version  Java 8
+     */
+    public void setNumPers(){
+<span class="fc" id="L81">        dernierNumero = getDernierNumero()+1;</span>
+<span class="fc" id="L82">        this.numeroPers = this.getDernierNumero();</span>
+<span class="fc" id="L83">    }</span>
+    /**
+     * Change le nom de personne
+     * @param nom : String : nouveau nom de personne 
+     * @author Jérémy Duval
+     * @version  Java 8
+     */
+    public void setNomPers(String nom) {
+<span class="fc" id="L91">        this.nomPers = nom;</span>
+<span class="fc" id="L92">    }</span>
+    /**
+     * Change le prenom de personne
+     * @param prenom : String : nouveau prenom de personne 
+     * @author Jérémy Duval
+     * @version  Java 8
+     */
+    public void setPrenomPers(String prenom) {
+<span class="fc" id="L100">        this.prenomPers = prenom;</span>
+<span class="fc" id="L101">    }</span>
+    /**
+     * Change l'année de naissance
+     * @param annee : int : nouvelle année de naissance
+     * @author Jérémy Duval
+     * @version  Java 8
+     */
+    public void setAnNaissance(int annee) {
+<span class="fc" id="L109">        this.anNaissancePersonne = annee;</span>
+<span class="fc" id="L110">    }</span>
+    
+    /**************************************************************************/
+    
+    /**
+     * Redéfinition de toString()
+     * @return String : les informations de la personne
+     * @author Jérémy Duval
+     * @version  Java 8
+     */
+    @Override
+    public String toString(){
+<span class="fc" id="L122">        return this.nomPers + &quot;, &quot; + this.prenomPers + &quot;, &quot; + this.anNaissancePersonne;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
